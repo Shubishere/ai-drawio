@@ -28,13 +28,6 @@ claude mcp add-json ai-drawio '{
 }'
 ```
 
-### From Sparticle Marketplace
-
-```bash
-# If you have sparticle-toolkit marketplace installed
-/plugin install ai-drawio
-```
-
 ## Usage
 
 Simply describe the diagram you want:
@@ -142,5 +135,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Related Projects
 
-- [sparticle-toolkit](https://github.com/sparticleinc/sparticle-toolkit) - Sparticle skill marketplace
 - [next-ai-draw-io](https://github.com/DayuanJiang/next-ai-draw-io) - Original web-based implementation
