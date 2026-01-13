@@ -24,14 +24,17 @@ AI-powered draw.io diagram generator for Claude Code. Generate flowcharts, archi
 # Clone the repository
 git clone https://github.com/GBSOSS/ai-drawio.git
 
-# Add as a local plugin
-cd ai-drawio
-claude plugin add ./
+# Create symlink to Claude Code plugins directory
+ln -s "$(pwd)/ai-drawio" ~/.claude/plugins/ai-drawio
 ```
 
-Or add directly from GitHub:
-```bash
-claude plugin add https://github.com/GBSOSS/ai-drawio
+Or manually add to your Claude Code settings (`~/.claude/settings.json`):
+```json
+{
+  "plugins": [
+    "/path/to/ai-drawio"
+  ]
+}
 ```
 
 ## Usage
